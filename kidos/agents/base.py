@@ -6,8 +6,9 @@ from abc import ABC, abstractmethod
 from dataclasses import dataclass, field
 from typing import Any, Literal
 
-from tools.ollama_tool import OllamaTool
-from tools.comfyui_tool import ComfyUITool
+from kidos.tools.ollama_tool import OllamaTool
+from kidos.tools.comfyui_tool import ComfyUITool
+from kidos.tools.tts_tool import TTSTool
 
 
 @dataclass
@@ -35,9 +36,11 @@ class BaseAgent(ABC):
         self,
         ollama: OllamaTool | None = None,
         comfyui: ComfyUITool | None = None,
+        tts: TTSTool | None = None,
     ):
         self.ollama = ollama or OllamaTool()
         self.comfyui = comfyui or ComfyUITool()
+        self.tts = tts
 
     @property
     @abstractmethod

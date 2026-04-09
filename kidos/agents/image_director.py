@@ -2,8 +2,8 @@
 
 from typing import Any
 
-from agents.base import BaseAgent, AgentResult
-from agents.prompt_engineer import PromptEngineerAgent
+from kidos.agents.base import BaseAgent, AgentResult
+from kidos.agents.prompt_engineer import PromptEngineerAgent
 
 
 class ImageDirectorAgent(BaseAgent):

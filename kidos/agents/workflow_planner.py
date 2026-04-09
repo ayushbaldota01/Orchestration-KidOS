@@ -2,7 +2,7 @@
 
 from typing import Any
 
-from agents.base import BaseAgent, AgentResult
+from kidos.agents.base import BaseAgent, AgentResult
 
 
 class WorkflowPlannerAgent(BaseAgent):
